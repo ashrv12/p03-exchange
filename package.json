@@ -38,5 +38,9 @@
 		"onlyBuiltDependencies": [
 			"esbuild"
 		]
+	},
+	"dependencies": {
+		"@fontsource-variable/outfit": "^5.2.6",
+		"@fontsource/ibm-plex-mono": "^5.2.6"
 	}
 }
