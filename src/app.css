@@ -43,6 +43,16 @@
 		font-family: 'IBM Plex Mono', monospace;
 		font-weight: 700;
 	}
+
+	.no-scrollbar {
+		/* Hide scrollbar for Chrome, Safari and Opera */
+		-ms-overflow-style: none; /* IE and Edge */
+		scrollbar-width: none; /* Firefox */
+	}
+
+	.no-scrollbar::-webkit-scrollbar {
+		display: none; /* Chrome, Safari, Opera */
+	}
 }
 
 /* Chrome, Safari, Edge, Opera */
