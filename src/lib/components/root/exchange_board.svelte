@@ -17,7 +17,7 @@
 	}
 </script>
 
-<div class="grid h-[75%] w-full grid-cols-2 gap-x-1 gap-y-3 px-1">
+<div class="grid h-[65%] w-full grid-cols-2 gap-x-1 gap-y-3 px-1">
 	<div class="no-scrollbar font-plex-400 col-span-full flex h-[3rem] overflow-x-scroll text-2xl">
 		<ul class="flex items-center gap-x-3 whitespace-nowrap">
 			<li>

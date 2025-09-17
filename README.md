@@ -1,6 +1,7 @@
 # Quick exchange for all of the major banks in Mongolia
 
 - [x] Obtain Mongolbank api
+- [ ] Emphasize USD CNY prices
 - [ ] Add currency select to the exchange
 - [ ] Calculate the rate change between 2 inputs
 - [ ] Add database storage

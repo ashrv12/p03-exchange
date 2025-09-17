@@ -7,7 +7,7 @@
 </script>
 
 <SelectionIslands />
-<MntToUsd />
+<MntToUsd {data} />
 <ExchangeBoard {data} />
 <div class="absolute bottom-0 left-0 flex w-full items-end justify-between p-2">
 	<h1 class="text-lg text-[#edededff]/25">Open Charter.</h1>
