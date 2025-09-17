@@ -50,7 +50,10 @@
 		{#each Object.entries(data.rates) as currencyRate}
 			{#if currencyRate[0] != 'RATE_DATE'}
 				<div class="flex gap-x-2 py-1 text-[#edededff]">
-					<h3 class="">{getEmoji(currencyRate[0].toLowerCase())} {currencyRate[1]}</h3>
+					<h3 class="">
+						{getEmoji(currencyRate[0].toLowerCase())}
+						<span class="font-semibold">{currencyRate[1]}</span>
+					</h3>
 					<h3>{$preferences.currency}</h3>
 				</div>
 			{/if}
