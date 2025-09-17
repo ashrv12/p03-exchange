@@ -1,51 +1,51 @@
 // src/lib/emojisToCurrency.ts
-
 export const emojisToCurrency = [
-	{ currency: 'usd', emoji: '🇺🇸' }, // US Dollar
-	{ currency: 'cny', emoji: '🇨🇳' }, // Chinese Yuan
-	{ currency: 'eur', emoji: '🇪🇺' }, // Euro
-	{ currency: 'inr', emoji: '🇮🇳' }, // Indian Rupee
-	{ currency: 'jpy', emoji: '🇯🇵' }, // Japanese Yen
-	{ currency: 'gbp', emoji: '🇬🇧' }, // British Pound
-	{ currency: 'cad', emoji: '🇨🇦' }, // Canadian Dollar
-	{ currency: 'chf', emoji: '🇨🇭' }, // Swiss Franc
-	{ currency: 'sek', emoji: '🇸🇪' }, // Swedish Krona
-	{ currency: 'bgn', emoji: '🇧🇬' }, // Bulgarian Lev
-	{ currency: 'huf', emoji: '🇭🇺' }, // Hungarian Forint
-	{ currency: 'krw', emoji: '🇰🇷' }, // South Korean Won
-	{ currency: 'egp', emoji: '🇪🇬' }, // Egyptian Pound
-	{ currency: 'hkd', emoji: '🇭🇰' }, // Hong Kong Dollar
-	{ currency: 'rub', emoji: '🇷🇺' }, // Russian Ruble
-	{ currency: 'kzt', emoji: '🇰🇿' }, // Kazakhstani Tenge
-	{ currency: 'kpw', emoji: '🇰🇵' }, // North Korean Won
-	{ currency: 'aud', emoji: '🇦🇺' }, // Australian Dollar
-	{ currency: 'czk', emoji: '🇨🇿' }, // Czech Koruna
-	{ currency: 'twd', emoji: '🇹🇼' }, // Taiwan Dollar
-	{ currency: 'thb', emoji: '🇹🇭' }, // Thai Baht
-	{ currency: 'idr', emoji: '🇮🇩' }, // Indonesian Rupiah
-	{ currency: 'myr', emoji: '🇲🇾' }, // Malaysian Ringgit
-	{ currency: 'sgd', emoji: '🇸🇬' }, // Singapore Dollar
-	{ currency: 'aed', emoji: '🇦🇪' }, // UAE Dirham
-	{ currency: 'kwd', emoji: '🇰🇼' }, // Kuwaiti Dinar
-	{ currency: 'nzd', emoji: '🇳🇿' }, // New Zealand Dollar
-	{ currency: 'dkk', emoji: '🇩🇰' }, // Danish Krone
-	{ currency: 'pln', emoji: '🇵🇱' }, // Polish Zloty
-	{ currency: 'uah', emoji: '🇺🇦' }, // Ukrainian Hryvnia
-	{ currency: 'nok', emoji: '🇳🇴' }, // Norwegian Krone
-	{ currency: 'npr', emoji: '🇳🇵' }, // Nepalese Rupee
-	{ currency: 'zar', emoji: '🇿🇦' }, // South African Rand
-	{ currency: 'try', emoji: '🇹🇷' }, // Turkish Lira
-	{ currency: 'vnd', emoji: '🇻🇳' }, // Vietnamese Dong
-	{ currency: 'brl', emoji: '🇧🇷' }, // Brazilian Real
-	{ currency: 'mxn', emoji: '🇲🇽' }, // Mexican Peso
-	{ currency: 'ars', emoji: '🇦🇷' }, // Argentine Peso
-	{ currency: 'clp', emoji: '🇨🇱' }, // Chilean Peso
-	{ currency: 'cop', emoji: '🇨🇴' }, // Colombian Peso
-	{ currency: 'php', emoji: '🇵🇭' }, // Philippine Peso
-	{ currency: 'ngn', emoji: '🇳🇬' }, // Nigerian Naira
-	{ currency: 'ils', emoji: '🇮🇱' }, // Israeli Shekel
-	{ currency: 'sar', emoji: '🇸🇦' }, // Saudi Riyal
-	{ currency: 'qar', emoji: '🇶🇦' }, // Qatari Riyal
-	{ currency: 'xau', emoji: '⚜️' }, // Gold
-	{ currency: 'xag', emoji: '🪙' } // Silver
+	{ currency: 'mnt', emoji: '🇲🇳', country: 'Mongolia' },
+	{ currency: 'usd', emoji: '🇺🇸', country: 'United States' },
+	{ currency: 'cny', emoji: '🇨🇳', country: 'China' },
+	{ currency: 'eur', emoji: '🇪🇺', country: 'European Union' },
+	{ currency: 'inr', emoji: '🇮🇳', country: 'India' },
+	{ currency: 'jpy', emoji: '🇯🇵', country: 'Japan' },
+	{ currency: 'gbp', emoji: '🇬🇧', country: 'United Kingdom' },
+	{ currency: 'cad', emoji: '🇨🇦', country: 'Canada' },
+	{ currency: 'chf', emoji: '🇨🇭', country: 'Switzerland' },
+	{ currency: 'sek', emoji: '🇸🇪', country: 'Sweden' },
+	{ currency: 'bgn', emoji: '🇧🇬', country: 'Bulgaria' },
+	{ currency: 'huf', emoji: '🇭🇺', country: 'Hungary' },
+	{ currency: 'krw', emoji: '🇰🇷', country: 'South Korea' },
+	{ currency: 'egp', emoji: '🇪🇬', country: 'Egypt' },
+	{ currency: 'hkd', emoji: '🇭🇰', country: 'Hong Kong' },
+	{ currency: 'rub', emoji: '🇷🇺', country: 'Russia' },
+	{ currency: 'kzt', emoji: '🇰🇿', country: 'Kazakhstan' },
+	{ currency: 'kpw', emoji: '🇰🇵', country: 'North Korea' },
+	{ currency: 'aud', emoji: '🇦🇺', country: 'Australia' },
+	{ currency: 'czk', emoji: '🇨🇿', country: 'Czech Republic' },
+	{ currency: 'twd', emoji: '🇹🇼', country: 'Taiwan' },
+	{ currency: 'thb', emoji: '🇹🇭', country: 'Thailand' },
+	{ currency: 'idr', emoji: '🇮🇩', country: 'Indonesia' },
+	{ currency: 'myr', emoji: '🇲🇾', country: 'Malaysia' },
+	{ currency: 'sgd', emoji: '🇸🇬', country: 'Singapore' },
+	{ currency: 'aed', emoji: '🇦🇪', country: 'United Arab Emirates' },
+	{ currency: 'kwd', emoji: '🇰🇼', country: 'Kuwait' },
+	{ currency: 'nzd', emoji: '🇳🇿', country: 'New Zealand' },
+	{ currency: 'dkk', emoji: '🇩🇰', country: 'Denmark' },
+	{ currency: 'pln', emoji: '🇵🇱', country: 'Poland' },
+	{ currency: 'uah', emoji: '🇺🇦', country: 'Ukraine' },
+	{ currency: 'nok', emoji: '🇳🇴', country: 'Norway' },
+	{ currency: 'npr', emoji: '🇳🇵', country: 'Nepal' },
+	{ currency: 'zar', emoji: '🇿🇦', country: 'South Africa' },
+	{ currency: 'try', emoji: '🇹🇷', country: 'Türkiye' },
+	{ currency: 'vnd', emoji: '🇻🇳', country: 'Vietnam' },
+	{ currency: 'brl', emoji: '🇧🇷', country: 'Brazil' },
+	{ currency: 'mxn', emoji: '🇲🇽', country: 'Mexico' },
+	{ currency: 'ars', emoji: '🇦🇷', country: 'Argentina' },
+	{ currency: 'clp', emoji: '🇨🇱', country: 'Chile' },
+	{ currency: 'cop', emoji: '🇨🇴', country: 'Colombia' },
+	{ currency: 'php', emoji: '🇵🇭', country: 'Philippines' },
+	{ currency: 'ngn', emoji: '🇳🇬', country: 'Nigeria' },
+	{ currency: 'ils', emoji: '🇮🇱', country: 'Israel' },
+	{ currency: 'sar', emoji: '🇸🇦', country: 'Saudi Arabia' },
+	{ currency: 'qar', emoji: '🇶🇦', country: 'Qatar' },
+	{ currency: 'xau', emoji: '⚜️', country: 'Gold' },
+	{ currency: 'xag', emoji: '🪙', country: 'Silver' }
 ];

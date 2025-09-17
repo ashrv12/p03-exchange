@@ -76,3 +76,11 @@ body {
 	background-repeat: no-repeat;
 	font-family: 'Outfit Variable', sans-serif;
 }
+
+.glass {
+	background: rgba(13, 13, 13, 0.79);
+	box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+	backdrop-filter: blur(14.1px);
+	-webkit-backdrop-filter: blur(14.1px);
+	/* border: 1px solid rgba(13, 13, 13, 0.3); */
+}

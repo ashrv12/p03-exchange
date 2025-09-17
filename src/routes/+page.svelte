@@ -1,9 +1,11 @@
 <script>
 	import ExchangeBoard from '$lib/components/root/exchange_board.svelte';
 	import MntToUsd from '$lib/components/root/mnt_to_usd.svelte';
+	import SelectionIslands from '$lib/components/root/selection_islands.svelte';
 </script>
 
-<main class="relative flex h-full w-full flex-col gap-y-3">
+<main class="relative flex h-full w-full flex-col justify-around gap-y-3">
+	<SelectionIslands />
 	<MntToUsd />
 	<ExchangeBoard />
 	<div class="absolute bottom-0 left-0 flex w-full items-end justify-between p-2">
