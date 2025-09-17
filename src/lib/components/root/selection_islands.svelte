@@ -14,9 +14,8 @@
 		if (selectedCountry) {
 			preferences.update((prefs) => ({
 				...prefs,
-				emoji: selectedCountry.emoji,
-				country: selectedCountry.country,
-				currency: selectedCountry.currency
+				countryEmoji: selectedCountry.countryEmoji,
+				country: selectedCountry.country
 			}));
 		}
 	});
@@ -29,13 +28,14 @@
 	>
 		<h3 class="font-thin">Country</h3>
 		<select
-			class="w-[80%] text-center"
+			class="w-[80%] text-center opacity-50"
 			bind:value={selectedCountry}
 			name="countries"
 			id="countrySelect"
+			disabled
 		>
 			{#each emojisToCurrency as country}
-				<option value={country}>{country.emoji} {country.country}</option>
+				<option value={country}>{country.countryEmoji} {country.country}</option>
 			{/each}
 		</select>
 	</div>
@@ -45,13 +45,14 @@
 	>
 		<h3 class="font-thin">Currency</h3>
 		<select
-			class="w-[80%] text-center"
+			class="w-[80%] text-center opacity-50"
 			bind:value={selectedCurrency}
 			name="countries"
 			id="countrySelect"
+			disabled
 		>
 			{#each emojisToCurrency as country}
-				<option value={country.currency}>{country.emoji} {country.currency}</option>
+				<option value={country.currency}>{country.currencyEmoji} {country.currency}</option>
 			{/each}
 		</select>
 	</div>

@@ -2,13 +2,15 @@ import { writable } from 'svelte/store';
 import { browser } from '$app/environment';
 
 interface Preferences {
-	emoji: string;
+	countryEmoji: string;
+	currencyEmoji: string;
 	currency: string;
 	country: string;
 }
 
 const defaultPreferences: Preferences = {
-	emoji: '🇲🇳',
+	countryEmoji: '🇲🇳',
+	currencyEmoji: '🇲🇳',
 	currency: 'mnt',
 	country: 'Mongolia'
 };
