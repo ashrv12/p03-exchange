@@ -57,7 +57,13 @@
 		</div> -->
 		<select bind:value={selectedTargetCurrency}>
 			{#each emojisToCurrency as country}
-				<option value={country.currency}>{country.countryEmoji} {country.currency}</option>
+				{#if country.currency === 'mnt'}
+					<option value={country.currency} disabled
+						>{country.countryEmoji} {country.currency}</option
+					>
+				{:else}
+					<option value={country.currency}>{country.countryEmoji} {country.currency}</option>
+				{/if}
 			{/each}
 		</select>
 	</div>
