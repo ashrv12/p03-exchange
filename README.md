@@ -2,13 +2,13 @@
 
 - [x] Obtain Mongolbank api
 - [ ] Emphasize USD CNY prices
-- [ ] Add currency select to the exchange
-- [ ] Calculate the rate change between 2 inputs
+- [x] Add currency select to the exchange
+- [x] Calculate the rate change between 2 inputs
 - [ ] Add database storage
-- [ ] khanbank
+- [x] khanbank
 - [ ] tdb
-- [ ] golomt
-- [ ] xac
+- [x] golomt
+- [-] xac
 - [ ] average of all banks
 - [ ] Find open apis for exchange rate information internationally
 - [ ] Build threlte ui (optional)
