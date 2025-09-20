@@ -3,7 +3,7 @@
 	let selectedPage = $state('home');
 </script>
 
-<div class="glass absolute top-0 flex w-dvw items-center py-1 text-[#edededff]">
+<div class="glass absolute top-0 flex w-dvw items-center py-1 text-[#edededff] md:hidden">
 	<button onclick={() => (openMenu = !openMenu)}>
 		<img class="w-[2rem]" src="./burger.svg" alt="menu" />
 	</button>

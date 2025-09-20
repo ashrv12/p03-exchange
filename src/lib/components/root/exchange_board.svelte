@@ -1,10 +1,23 @@
 <script lang="ts">
 	import { emojisToCurrency } from '$lib/emojis_to_currency';
+	import { onMount } from 'svelte';
 	import { preferences } from '../../../stores/preferences';
 
-	let banks = $state(['MongolBank', 'KhanBank', 'TDB', 'GolomtBank', 'XacBank']);
+	// date for today
+	const formatted = new Date().toLocaleDateString('en-CA', {
+		timeZone: 'Asia/Ulaanbaatar'
+	});
+
+	// api for banks
+	const khanbank = `https://www.khanbank.com/api/back/rates?date=${formatted}`;
+
+	// list of banks
+	let banks = $state(['MongolBank', 'KhanBank', 'TDB', 'GolomtBank']);
+	// current selected bank
 	let currentSelectedBank = $state(banks[0]);
-	let showBankOptions = $state(false);
+	// selected json data of selected banks
+	let khanRates = $state();
+	let golomtData = $state();
 
 	let { data } = $props();
 
@@ -15,48 +28,68 @@
 	function getEmoji(currencyCode: string) {
 		return emojiMap[currencyCode.toLowerCase()] ?? '🏳️'; // fallback flag
 	}
+
+	onMount(async () => {
+		const res = await fetch(khanbank);
+		if (res.ok) {
+			khanRates = await res.json();
+		} else {
+			console.log(res.status);
+		}
+
+		const golomtResponse = await fetch('/api/currency');
+		if (res.ok) {
+			golomtData = await golomtResponse.json();
+		} else {
+			console.log(golomtResponse.status);
+		}
+	});
 </script>
 
-<div class="grid h-[65%] w-full grid-cols-2 gap-x-1 gap-y-3 px-1">
-	<div class="no-scrollbar font-plex-400 col-span-full flex h-[3rem] overflow-x-scroll text-2xl">
-		<ul class="flex items-center gap-x-3 whitespace-nowrap">
-			<li>
-				<button
-					onclick={() => {
-						showBankOptions = !showBankOptions;
-					}}
-					class="w-fit">{currentSelectedBank}</button
-				>
-			</li>
-			{#if showBankOptions}
-				{#each banks.filter((bank) => bank !== currentSelectedBank) as bank}
-					<li>
-						<button
-							class=""
-							onclick={() => {
-								currentSelectedBank = bank;
-								showBankOptions = !showBankOptions;
-							}}>{bank}</button
-						>
-					</li>
-				{/each}
-			{/if}
-		</ul>
-	</div>
-
+<div class="flex h-[76%] w-full flex-col gap-x-1 gap-y-2 px-2 text-[#edededff]">
 	<div
-		class="glass col-span-full grid grid-cols-2 overflow-y-scroll rounded-md px-2 text-sm font-thin"
+		class="glass relative flex h-full w-full flex-col overflow-y-scroll rounded-md text-sm font-thin"
 	>
-		{#each Object.entries(data.rates) as currencyRate}
-			{#if currencyRate[0] != 'RATE_DATE'}
-				<div class="flex gap-x-2 py-1 text-[#edededff]">
+		<select
+			class="glass sticky top-0 right-0 left-0 w-full border-b-[1px] p-1 text-xl font-semibold"
+			bind:value={currentSelectedBank}
+		>
+			{#each banks as bank}
+				<option value={bank}>{bank}</option>
+			{/each}
+		</select>
+		{#if currentSelectedBank === banks[0]}
+			{#each Object.entries(data.rates) as currencyRate}
+				{#if currencyRate[0] != 'RATE_DATE'}
+					<div class="flex gap-x-2 px-2">
+						<h3 class="">
+							{getEmoji(currencyRate[0].toLowerCase())}
+							<span class="font-semibold">{currencyRate[1]}</span>
+						</h3>
+						<h3>{$preferences.currency}</h3>
+					</div>
+				{/if}
+			{/each}
+		{:else if currentSelectedBank === banks[1]}
+			{#each khanRates as rate}
+				<div class="flex gap-x-2 px-2">
 					<h3 class="">
-						{getEmoji(currencyRate[0].toLowerCase())}
-						<span class="font-semibold">{currencyRate[1]}</span>
+						{getEmoji(rate.currency.toLowerCase())}
+						<span class="font-semibold">{rate.sellRate}</span>
 					</h3>
 					<h3>{$preferences.currency}</h3>
 				</div>
-			{/if}
-		{/each}
+			{/each}
+		{:else if currentSelectedBank === banks[3]}
+			{#each Object.entries(golomtData.golomtRates.result) as [code, data]}
+				<div class="flex gap-x-2 px-2">
+					<h3 class="">
+						{getEmoji(code.toLowerCase())}
+						<span class="font-semibold">{data.non_cash_sell.cvalue}</span>
+					</h3>
+					<h3>{$preferences.currency}</h3>
+				</div>
+			{/each}
+		{/if}
 	</div>
 </div>
