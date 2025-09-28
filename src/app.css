@@ -8,7 +8,63 @@
 @import '@fontsource/ibm-plex-mono/600.css';
 @import '@fontsource/ibm-plex-mono/700.css';
 
+@font-face {
+	font-family: 'Saans';
+	src: url('/fonts/OpentypeSaans/Saans-TRIAL-Light.otf') format('opentype');
+	font-weight: 300;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'Saans';
+	src: url('/fonts/OpentypeSaans/Saans-TRIAL-Regular.otf') format('opentype');
+	font-weight: normal;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'Saans';
+	src: url('/fonts/OpentypeSaans/Saans-TRIAL-Medium.otf') format('opentype');
+	font-weight: 500;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'SaansMono';
+	src: url('/fonts/OpentypeMonoSaans/SaansMono-TRIAL-Heavy.otf') format('opentype');
+	font-weight: 900;
+	font-style: normal;
+	font-display: swap;
+}
+
 @layer utilities {
+	.saans {
+		font-family: 'Saans';
+		font-weight: normal;
+		font-style: normal;
+	}
+
+	.saans-md {
+		font-family: 'Saans';
+		font-weight: 500;
+		font-style: normal;
+	}
+
+	.saans-sm {
+		font-family: 'Saans';
+		font-weight: 300;
+		font-style: normal;
+	}
+
+	.saans-mono-heavy {
+		font-family: 'SaansMono';
+		font-weight: 900;
+		font-style: normal;
+	}
+
 	.font-plex-100 {
 		font-family: 'IBM Plex Mono', monospace;
 		font-weight: 100;
@@ -70,11 +126,8 @@ input[type='number'] {
 body {
 	width: 100dvw;
 	height: 100dvh;
-	background-image: url('https://raw.githubusercontent.com/ashrv12/p03-exchange/refs/heads/main/static/containers.jpg');
-	background-size: cover;
-	background-position: center;
-	background-repeat: no-repeat;
-	font-family: 'Outfit Variable', sans-serif;
+	background-color: #222222;
+	color: #f1f1f1;
 }
 
 .glass {
