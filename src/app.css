@@ -7,62 +7,20 @@
 @import '@fontsource/ibm-plex-mono/500.css';
 @import '@fontsource/ibm-plex-mono/600.css';
 @import '@fontsource/ibm-plex-mono/700.css';
-
-@font-face {
-	font-family: 'Saans';
-	src: url('/fonts/OpentypeSaans/Saans-TRIAL-Light.otf') format('opentype');
-	font-weight: 300;
-	font-style: normal;
-	font-display: swap;
-}
-
-@font-face {
-	font-family: 'Saans';
-	src: url('/fonts/OpentypeSaans/Saans-TRIAL-Regular.otf') format('opentype');
-	font-weight: normal;
-	font-style: normal;
-	font-display: swap;
-}
-
-@font-face {
-	font-family: 'Saans';
-	src: url('/fonts/OpentypeSaans/Saans-TRIAL-Medium.otf') format('opentype');
-	font-weight: 500;
-	font-style: normal;
-	font-display: swap;
-}
-
-@font-face {
-	font-family: 'SaansMono';
-	src: url('/fonts/OpentypeMonoSaans/SaansMono-TRIAL-Heavy.otf') format('opentype');
-	font-weight: 900;
-	font-style: normal;
-	font-display: swap;
-}
+@import '@fontsource-variable/montserrat';
 
 @layer utilities {
-	.saans {
-		font-family: 'Saans';
-		font-weight: normal;
-		font-style: normal;
-	}
-
-	.saans-md {
-		font-family: 'Saans';
-		font-weight: 500;
-		font-style: normal;
-	}
-
-	.saans-sm {
-		font-family: 'Saans';
+	.font-rat-thin {
+		font-family: 'Montserrat Variable', sans-serif;
 		font-weight: 300;
-		font-style: normal;
 	}
-
-	.saans-mono-heavy {
-		font-family: 'SaansMono';
-		font-weight: 900;
-		font-style: normal;
+	.font-rat {
+		font-family: 'Montserrat Variable', sans-serif;
+		font-weight: 400;
+	}
+	.font-rat-medium {
+		font-family: 'Montserrat Variable', sans-serif;
+		font-weight: 500;
 	}
 
 	.font-plex-100 {

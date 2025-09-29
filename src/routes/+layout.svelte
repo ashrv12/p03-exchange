@@ -4,6 +4,8 @@
 	import { browser } from '$app/environment';
 	import { beforeNavigate, afterNavigate } from '$app/navigation';
 	import posthog from 'posthog-js';
+	import DesktopSidebar from '$lib/components/root/desktop_sidebar.svelte';
+	import { page } from '$app/state';
 
 	let { children } = $props();
 
@@ -17,4 +19,7 @@
 	<link rel="icon" href={favicon} />
 </svelte:head>
 
-{@render children?.()}
+<main class="font-rat flex h-full w-full">
+	<DesktopSidebar {page} />
+	{@render children?.()}
+</main>

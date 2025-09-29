@@ -40,6 +40,7 @@
 		]
 	},
 	"dependencies": {
+		"@fontsource-variable/montserrat": "^5.2.8",
 		"@fontsource-variable/outfit": "^5.2.6",
 		"@fontsource/ibm-plex-mono": "^5.2.6",
 		"@sveltejs/adapter-vercel": "^5.10.2",
