@@ -3,7 +3,7 @@
 	import TriangleRight from '../svgs/triangle_right.svelte';
 </script>
 
-<div class="flex h-full grow flex-col text-[#a8a8a8]">
+<div class="flex h-full grow flex-col text-[#B8B8B8]">
 	<div class="z-0 flex h-[6%] w-full items-end pl-3">
 		<!-- Mock Tab -->
 		<div
@@ -20,10 +20,14 @@
 		<div class="flex h-[10%] w-full items-center border-b-[1px] border-[#404040]/25 px-1">
 			<h1 class="font-rat-thin px-5 text-2xl">Dashboard</h1>
 		</div>
-		<div class="w-full grow p-5">
+		<div class="flex w-full grow gap-4 p-5">
 			<div
-				class="h-[250px] w-[400px] rounded-lg border-[1px] border-[#404040]/25 bg-[#0D0D0D]"
-			></div>
+				class="h-[250px] w-[400px] rounded-lg border-[1px] border-[#404040]/25 bg-[#0D0D0D] p-2 hover:translate-x-[-1px] hover:translate-y-[-1px] hover:outline hover:outline-[#1A1A1A]"
+			>
+				<h1>Coal <span class="opacity-75">/ USD</span></h1>
+			</div>
+
+			<div class="h-[250px] w-[250px] rounded-full border-[1px] border-[#404040]/25"></div>
 		</div>
 	</div>
 </div>

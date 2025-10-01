@@ -44,8 +44,8 @@
 			</a>
 		{/if}
 
-		<h2 class="font-rat-thin mt-4 w-[80%] border-b-[1px] border-[#222222]/50 text-[#A8A8A8]">
-			open source data
+		<h2 class="font-rat-thin mt-4 w-[80%] border-b-[1px] border-[#222222]/50 text-[#A8A8A8]/75">
+			open_source_data
 		</h2>
 
 		{#if page.url.pathname === '/statistics'}
@@ -90,8 +90,8 @@
 			</a>
 		{/if}
 
-		<h2 class="font-rat-thin mt-4 w-[80%] border-b-[1px] border-[#222222]/50 text-[#A8A8A8]">
-			source of news
+		<h2 class="font-rat-thin mt-4 w-[80%] border-b-[1px] border-[#222222]/50 text-[#A8A8A8]/75">
+			source_of_news
 		</h2>
 
 		{#if page.url.pathname === '/news-feed'}
@@ -122,8 +122,8 @@
 			</a>
 		{/if}
 
-		<h2 class="font-rat-thin mt-4 w-[80%] border-b-[1px] border-[#222222]/50 text-[#A8A8A8]">
-			local tourism
+		<h2 class="font-rat-thin mt-4 w-[80%] border-b-[1px] border-[#222222]/50 text-[#A8A8A8]/75">
+			local_tourism
 		</h2>
 
 		{#if page.url.pathname === '/tourism'}
