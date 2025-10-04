@@ -2,6 +2,8 @@
 	import House from '../svgs/house.svelte';
 	import SearchIcon from '../svgs/search_icon.svelte';
 	import TriangleRight from '../svgs/triangle_right.svelte';
+	import DesktopChartsRoot from './desktop_charts_root.svelte';
+	import DesktopListsRoot from './desktop_lists_root.svelte';
 </script>
 
 <div class="flex h-full grow flex-col text-[#B8B8B8]">
@@ -34,24 +36,9 @@
 				/>
 			</div>
 		</div>
-		<div class="flex w-full grow justify-between gap-4 p-5">
-			<div
-				class="h-[250px] w-[400px] rounded-lg border-[1px] border-[#404040]/25 bg-[#0D0D0D] p-2 hover:outline hover:outline-[#1A1A1A]"
-			>
-				<h1>Coal <span class="opacity-75">/ USD</span></h1>
-			</div>
-
-			<div
-				class="h-[250px] w-[400px] rounded-lg border-[1px] border-[#404040]/25 bg-[#0D0D0D] p-2 hover:outline hover:outline-[#1A1A1A]"
-			>
-				<h1>USD <span class="opacity-75">/ MNT</span></h1>
-			</div>
-
-			<div
-				class="h-[250px] w-[400px] rounded-lg border-[1px] border-[#404040]/25 bg-[#0D0D0D] p-2 hover:outline hover:outline-[#1A1A1A]"
-			>
-				<h1>Net inflation</h1>
-			</div>
+		<div class="grid w-full grow grid-cols-3 grid-rows-2 justify-between gap-x-4 gap-y-8 p-5">
+			<DesktopChartsRoot />
+			<DesktopListsRoot />
 		</div>
 	</div>
 </div>
