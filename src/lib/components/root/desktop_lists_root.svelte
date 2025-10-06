@@ -35,7 +35,7 @@
 </div>
 
 <div
-	class="flex h-full w-full justify-between gap-x-3 rounded-lg border-[1px] border-[#404040]/25 p-3"
+	class="flex h-full w-full justify-between gap-x-3 rounded-lg border-[1px] border-[#404040]/25 p-3 hover:outline hover:outline-[#1A1A1A]"
 >
 	<div class="flex h-full flex-col items-center gap-y-3">
 		<h1 class="text-xl font-black"><u>YouTube</u></h1>

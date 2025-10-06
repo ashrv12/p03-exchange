@@ -44,6 +44,8 @@
 		"@fontsource-variable/outfit": "^5.2.6",
 		"@fontsource/ibm-plex-mono": "^5.2.6",
 		"@sveltejs/adapter-vercel": "^5.10.2",
+		"convex": "^1.27.3",
+		"convex-svelte": "^0.0.11",
 		"posthog-js": "^1.268.6",
 		"posthog-node": "^5.9.1"
 	}

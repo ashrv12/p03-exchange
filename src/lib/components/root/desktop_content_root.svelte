@@ -6,7 +6,7 @@
 	import DesktopListsRoot from './desktop_lists_root.svelte';
 </script>
 
-<div class="flex h-full grow flex-col text-[#B8B8B8]">
+<div class="flex h-full w-[85%] flex-col text-[#B8B8B8]">
 	<div class="z-0 flex h-[6%] w-full items-end pl-3">
 		<!-- Mock Tab -->
 		<div

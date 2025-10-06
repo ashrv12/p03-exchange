@@ -7,7 +7,12 @@
 	import DesktopSidebar from '$lib/components/root/desktop_sidebar.svelte';
 	import { page } from '$app/state';
 
-	let { children } = $props();
+	// setup convex
+	import { setupConvex } from 'convex-svelte';
+	import { PUBLIC_CONVEX_URL } from '$env/static/public';
+
+	const { children } = $props();
+	setupConvex(PUBLIC_CONVEX_URL);
 
 	if (browser) {
 		beforeNavigate(() => posthog.capture('$pageleave'));
