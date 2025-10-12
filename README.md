@@ -2,12 +2,10 @@
 
 ## Revvy's plans
 
-- [ ] Create a monthly cronjob api path for 1212 monthly export report
 - [ ] Gather all yearly export data starting from end of covid
 
 ## Data based todo list
 
-- [ ] Create Database schema for export data
 - [ ] Build a d3 test graph for home dashboard using the data
 - [ ] Modeling the data structure for the news feeds
 - [ ] Modeling the data structure for the local guides
@@ -41,3 +39,5 @@
 - [x] Create home dashboard skeleton
 - [x] Add database storage
 - [x] Obtain Mongolbank api
+- [x] Create a monthly cronjob api path for 1212 monthly export report
+- [x] Create Database schema for export data
