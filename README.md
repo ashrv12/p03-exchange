@@ -41,3 +41,7 @@
 - [x] Obtain Mongolbank api
 - [x] Create a monthly cronjob api path for 1212 monthly export report
 - [x] Create Database schema for export data
+
+# API MUTATIONS QUERY DOCS
+
+[Javascript](https://docs.convex.dev/client/javascript)
