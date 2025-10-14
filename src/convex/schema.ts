@@ -25,7 +25,7 @@ export default defineSchema({
 		entertainmentExports: v.float64(),
 		factoryProductsExports: v.float64(),
 		otherExports: v.float64()
-	}),
+	}).index('by_report_date', ['reportDate']),
 	yearlyExports: defineTable({
 		reportDate: v.string(),
 		total: v.float64(),
@@ -49,5 +49,5 @@ export default defineSchema({
 		entertainmentExports: v.float64(),
 		factoryProductsExports: v.float64(),
 		otherExports: v.float64()
-	})
+	}).index('by_report_date', ['reportDate'])
 });

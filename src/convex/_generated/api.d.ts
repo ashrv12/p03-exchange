@@ -14,6 +14,7 @@ import type {
   FunctionReference,
 } from "convex/server";
 import type * as exportsMutations from "../exportsMutations.js";
+import type * as exportsQueries from "../exportsQueries.js";
 
 /**
  * A utility for referencing Convex functions in your app's API.
@@ -25,6 +26,7 @@ import type * as exportsMutations from "../exportsMutations.js";
  */
 declare const fullApi: ApiFromModules<{
   exportsMutations: typeof exportsMutations;
+  exportsQueries: typeof exportsQueries;
 }>;
 export declare const api: FilterApi<
   typeof fullApi,

@@ -3,6 +3,7 @@
 ## Revvy's plans
 
 - [ ] Gather all yearly export data starting from end of covid
+- [ ] Set the monthly exports object data to the piechart
 
 ## Data based todo list
 
